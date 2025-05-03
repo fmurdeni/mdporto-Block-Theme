@@ -2,6 +2,8 @@
 
 A modern, elegant WordPress block theme designed for portfolio websites, with a focus on showcasing creative work and professional skills.
 
+![MDPorto Theme Screenshot](screenshot.png)
+
 ## Description
 
 MDPorto is a custom WordPress block theme built for the Full Site Editing experience. It provides a clean, professional design perfect for developers, designers, photographers, and other creative professionals who want to showcase their portfolio in a modern and elegant way.
