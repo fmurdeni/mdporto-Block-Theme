@@ -1,0 +1,205 @@
+/* 
+ * Archive Template Custom Styles
+ * Modern & Elegant Design Enhancements
+ */
+
+/* Card Hover Effects */
+.portfolio-item.hover-transform {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-item.hover-transform:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Featured Image Hover Effect */
+.portfolio-item .wp-block-post-featured-image {
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.portfolio-item .wp-block-post-featured-image img {
+    transition: transform 0.5s ease;
+    height: 280px;
+    object-fit: cover;
+}
+
+.portfolio-item:hover .wp-block-post-featured-image img {
+    transform: scale(1.05);
+}
+
+/* Card Content Area */
+.portfolio-item > .wp-block-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+}
+
+/* Title Hover Animation */
+.portfolio-item .wp-block-post-title a {
+    background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 2px;
+    transition: background-size 0.3s ease;
+}
+
+.portfolio-item:hover .wp-block-post-title a {
+    background-size: 100% 2px;
+}
+
+/* Read More Button Styling */
+.portfolio-item .wp-block-post-excerpt__more-link {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1.25rem;
+    margin-top: auto;
+    background-color: var(--wp--preset--color--primary);
+    color: white !important;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-self: flex-start;
+}
+
+.portfolio-item .wp-block-post-excerpt__more-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: var(--wp--preset--color--primary-hover, var(--wp--preset--color--primary));
+}
+
+.portfolio-item .wp-block-post-excerpt__more-link::after {
+    content: '';
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+    margin-left: 0.5em;
+    position: relative;
+    top: -1px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item .wp-block-post-excerpt__more-link:hover::after {
+    transform: rotate(45deg) translate(2px, -2px);
+}
+
+/* Center Line Separator */
+.center-line {
+    width: 80px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 3px !important;
+}
+
+/* Pagination Styling */
+.wp-block-query-pagination {
+    margin-top: 3rem;
+}
+
+.wp-block-query-pagination .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+}
+
+.wp-block-query-pagination .page-numbers:hover {
+    background-color: #f7fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.wp-block-query-pagination .page-numbers.current {
+    background-color: var(--wp--preset--color--primary);
+    color: white !important;
+}
+
+/* Animation for Archive Title */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wp-block-query-title {
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+/* Excerpt Text Limit */
+.wp-block-post-excerpt {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.wp-block-post-excerpt__excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+/* Equal Height Cards */
+.wp-block-post-template.is-flex-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem;
+    width: 100% !important;
+}
+
+.wp-block-post-template.is-flex-container > li {
+    margin: 0 !important;
+    display: flex;
+    height: 100%;
+    width: 100% !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .wp-block-post-template.is-flex-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .wp-block-post-template.is-flex-container {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .wp-block-post-template.is-flex-container.columns-3 > li {
+        width: 100% !important;
+    }
+    
+    .portfolio-item.hover-transform:hover {
+        transform: translateY(-5px);
+    }
+}

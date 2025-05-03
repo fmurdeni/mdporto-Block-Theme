@@ -1,0 +1,17 @@
+/*
+Theme Name: MDPorto
+Version: 1.1
+Theme URI: https://murdeni.com
+Author: Feri Murdeni
+Author URI: https://murdeni.com
+Description: A custom block theme for portfolio website
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mdporto
+Tags: portfolio, block-theme, full-site-editing, custom
+*/
+
+/* Import styles from theme.json */

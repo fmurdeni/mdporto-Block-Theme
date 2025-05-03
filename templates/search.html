@@ -1,0 +1,101 @@
+<!-- wp:template-part {"slug":"header","theme":"mdporto","tagName":"header","className":"site-header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"site-content","style":{"spacing":{"padding":{"top":"5rem","bottom":"5rem","right":"2rem","left":"2rem"},"margin":{"top":"0","bottom":"0"}},"color":{"gradient":"linear-gradient(135deg, rgba(249,250,251,1) 0%, rgba(240,243,247,1) 100%)"}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group site-content has-background"
+    style="background:linear-gradient(135deg, rgba(249,250,251,1) 0%, rgba(240,243,247,1) 100%);margin-top:0;margin-bottom:0;padding-top:5rem;padding-right:2rem;padding-bottom:5rem;padding-left:2rem">
+    <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"4rem"}},"typography":{"fontStyle":"normal","fontWeight":"500"}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group" style="margin-bottom:4rem;font-style:normal;font-weight:500">
+        <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"2.5rem","fontStyle":"normal","fontWeight":"700","letterSpacing":"-0.5px"},"color":{"text":"#1a202c"}}} -->
+        <h1 class="wp-block-heading has-text-align-center has-text-color"
+            style="color:#1a202c;font-size:2.5rem;font-style:normal;font-weight:700;letter-spacing:-0.5px">Hasil
+            Pencarian</h1>
+        <!-- /wp:heading -->
+
+        <!-- wp:separator {"className":"is-style-wide center-line","style":{"spacing":{"margin":{"top":"1.5rem","bottom":"1.5rem"}}},"backgroundColor":"primary"} -->
+        <hr class="wp-block-separator has-text-color has-primary-color has-alpha-channel-opacity has-primary-background-color has-background is-style-wide center-line"
+            style="margin-top:1.5rem;margin-bottom:1.5rem" />
+        <!-- /wp:separator -->
+
+        <!-- wp:search {"label":"Cari","showLabel":false,"placeholder":"Cari artikel, tutorial, dan lainnya...","buttonText":"Cari","buttonPosition":"button-inside","buttonUseIcon":true,"className":"search-form-large","style":{"border":{"radius":"8px","width":"1px"}},"fontSize":"medium"} /-->
+
+        <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.2rem","lineHeight":"1.6"},"color":{"text":"#4a5568"},"spacing":{"margin":{"top":"1.5rem"}}}} -->
+        <p class="has-text-align-center has-text-color"
+            style="color:#4a5568;margin-top:1.5rem;font-size:1.2rem;line-height:1.6">
+            Hasil pencarian untuk:
+        </p>
+        <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:query {"queryId":1,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+    <div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+        <!-- wp:group {"className":"portfolio-item hover-transform","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"radius":"12px","width":"0px","style":"none"},"boxShadow":{"x":"0","y":"10px","blur":"25px","spread":"0","color":"rgba(0, 0, 0, 0.04)","enable":true}},"backgroundColor":"white","layout":{"type":"default"}} -->
+        <div class="wp-block-group portfolio-item hover-transform has-white-background-color has-background"
+            style="border-style:none;border-width:0px;border-radius:12px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+            <!-- wp:post-featured-image {"isLink":true,"width":"100%","height":"280px","style":{"border":{"radius":{"topLeft":"12px","topRight":"12px","bottomLeft":"0px","bottomRight":"0px"}},"objectFit":"cover","objectPosition":"center center"}} /-->
+
+            <!-- wp:group {"className":"has-light-background-color","style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"border":{"radius":{"bottomLeft":"12px","bottomRight":"12px"}},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}},"typography":{"fontStyle":"normal","fontWeight":"500"}},"backgroundColor":"white"} -->
+            <div class="wp-block-group has-light-background-color has-white-background-color has-background has-link-color"
+                style="border-bottom-left-radius:12px;border-bottom-right-radius:12px;padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem;font-style:normal;font-weight:500">
+                <!-- wp:post-title {"isLink":true,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0.75rem","left":"0"}},"typography":{"fontStyle":"normal","fontWeight":"700","fontSize":"1.3rem","lineHeight":"1.4"},"color":{"text":"#1a202c"}}} /-->
+
+                <!-- wp:group {"style":{"spacing":{"margin":{"top":"0.75rem","bottom":"1rem"}},"color":{"text":"#718096"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"flex-start","verticalAlignment":"center"}} -->
+                <div class="wp-block-group has-text-color" style="color:#718096;margin-top:0.75rem;margin-bottom:1rem">
+                    <!-- wp:post-date {"style":{"typography":{"fontSize":"0.875rem","fontStyle":"normal","fontWeight":"500"}}} /-->
+
+                    <!-- wp:paragraph {"style":{"spacing":{"margin":{"left":"0.5rem","right":"0.5rem"}}}} -->
+                    <p style="margin-right:0.5rem;margin-left:0.5rem">•</p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:post-terms {"term":"category","style":{"typography":{"fontSize":"0.875rem","fontStyle":"normal","fontWeight":"500"}}} /-->
+                </div>
+                <!-- /wp:group -->
+
+                <!-- wp:post-excerpt {"moreText":"Baca Selengkapnya","excerptLength":20,"style":{"spacing":{"margin":{"top":"0.75rem","right":"0","bottom":"0","left":"0"}},"typography":{"fontSize":"1rem","lineHeight":"1.6"},"color":{"text":"#4a5568"}}} /-->
+            </div>
+            <!-- /wp:group -->
+        </div>
+        <!-- /wp:group -->
+        <!-- /wp:post-template -->
+
+        <!-- wp:query-pagination {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"},"elements":{"link":{"color":{"text":"var:preset|color|primary"},"typography":{"textDecoration":"none"}}},"spacing":{"margin":{"top":"3rem"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
+        <!-- wp:query-pagination-previous /-->
+
+        <!-- wp:query-pagination-numbers /-->
+
+        <!-- wp:query-pagination-next /-->
+        <!-- /wp:query-pagination -->
+
+        <!-- wp:query-no-results -->
+        <!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem"}},"border":{"radius":"12px"},"boxShadow":{"x":"0","y":"10px","blur":"25px","spread":"0","color":"rgba(0, 0, 0, 0.04)","enable":true}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group has-white-background-color has-background"
+            style="border-radius:12px;padding-top:3rem;padding-bottom:3rem">
+            <!-- wp:image {"width":"120px","height":"auto","sizeSlug":"large","align":"center","className":"has-custom-border","style":{"color":{"duotone":["#CBD5E0","#EDF2F7"]}}} -->
+            <figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpath d='M16 16s-1.5-2-4-2-4 2-4 2'%3E%3C/path%3E%3Cline x1='9' y1='9' x2='9.01' y2='9'%3E%3C/line%3E%3Cline x1='15' y1='9' x2='15.01' y2='9'%3E%3C/line%3E%3C/svg%3E"
+                    alt="No search results" style="width:120px;height:auto" /></figure>
+            <!-- /wp:image -->
+
+            <!-- wp:heading {"textAlign":"center","level":3,"style":{"spacing":{"margin":{"top":"1.5rem"}},"typography":{"fontStyle":"normal","fontWeight":"700"}}} -->
+            <h3 class="wp-block-heading has-text-align-center"
+                style="margin-top:1.5rem;font-style:normal;font-weight:700">Tidak ada hasil yang ditemukan</h3>
+            <!-- /wp:heading -->
+
+            <!-- wp:paragraph {"align":"center","style":{"color":{"text":"#718096"},"typography":{"fontSize":"1.1rem"}}} -->
+            <p class="has-text-align-center has-text-color" style="color:#718096;font-size:1.1rem">Maaf, kami tidak
+                dapat menemukan hasil yang sesuai dengan pencarian Anda.</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:paragraph {"align":"center","style":{"color":{"text":"#718096"},"typography":{"fontSize":"1.1rem"}}} -->
+            <p class="has-text-align-center has-text-color" style="color:#718096;font-size:1.1rem">Coba gunakan kata
+                kunci yang berbeda atau periksa ejaan Anda.</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+        <!-- /wp:query-no-results -->
+    </div>
+    <!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"mdporto","tagName":"footer","className":"site-footer"} /-->

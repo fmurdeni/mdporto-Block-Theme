@@ -1,0 +1,285 @@
+/* 
+ * Single Post Template Custom Styles
+ * Modern & Elegant Design Enhancements
+ */
+
+/* Main Content Area */
+.single-post-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Featured Image Styling */
+.wp-block-post-featured-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.wp-block-post-featured-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+/* Post Title Styling */
+.wp-block-post-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+}
+
+/* Post Meta Styling */
+.post-meta {
+    color: #718096;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.post-meta a {
+    color: var(--wp--preset--color--primary);
+    text-decoration: none;
+}
+
+.post-meta a:hover {
+    text-decoration: underline;
+}
+
+/* Post Content Styling */
+.single .wp-block-post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2d3748;
+}
+
+/* Heading Styles in Content */
+.single .wp-block-post-content h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #1a202c;
+}
+
+.single .wp-block-post-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    color: #1a202c;
+}
+
+.single .wp-block-post-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1a202c;
+}
+
+/* Paragraph Styling */
+.single .wp-block-post-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* List Styling */
+.single .wp-block-post-content ul,
+.single .wp-block-post-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.single .wp-block-post-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Blockquote Styling */
+.single .wp-block-post-content blockquote {
+    border-left: 4px solid var(--wp--preset--color--primary);
+    padding-left: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-style: italic;
+    color: #4a5568;
+}
+
+/* Image Styling */
+.single .wp-block-post-content img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+.single .wp-block-post-content figure {
+    margin: 2rem 0;
+}
+
+.single .wp-block-post-content figcaption {
+    font-size: 0.9rem;
+    color: #718096;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Code Block Styling */
+.single .wp-block-post-content pre {
+    background-color: #f7fafc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.single .wp-block-post-content code {
+    background-color: #f1f5f9;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Table Styling */
+.single .wp-block-post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.single .wp-block-post-content th,
+.single .wp-block-post-content td {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+}
+
+.single .wp-block-post-content th {
+    background-color: #f7fafc;
+    font-weight: 600;
+}
+
+/* Tags Styling */
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-tags a {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background-color: #f1f5f9;
+    color: #4a5568;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.post-tags a:hover {
+    background-color: var(--wp--preset--color--primary);
+    color: white;
+}
+
+/* Post Navigation Styling */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.post-navigation-link {
+    max-width: 48%;
+}
+
+.post-navigation-link a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.post-navigation-link a:hover {
+    color: var(--wp--preset--color--primary);
+}
+
+.post-navigation-link.previous a::before {
+    content: '←';
+    margin-right: 0.5rem;
+}
+
+.post-navigation-link.next a::after {
+    content: '→';
+    margin-left: 0.5rem;
+}
+
+/* Related Posts Styling */
+.related-posts-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1a202c;
+    position: relative;
+}
+
+.related-posts-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--wp--preset--color--primary);
+    margin: 1rem auto 0;
+}
+
+.related-post-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.related-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.related-post-content {
+    padding: 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.related-post-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.related-post-date {
+    font-size: 0.85rem;
+    color: #718096;
+    margin-top: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .wp-block-post-title {
+        font-size: 2rem;
+    }
+    
+    .wp-block-post-content {
+        font-size: 1rem;
+    }
+    
+    .related-posts-grid {
+        grid-template-columns: 1fr !important;
+    }
+}

@@ -1,0 +1,197 @@
+/* Portfolio Custom Styles
+--------------------------------------------- */
+
+/* Portfolio Archive Grid */
+.portfolio-grid {
+    margin-top: 2rem;
+}
+
+.portfolio-grid .wp-block-post-template {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-grid-item {
+    transition: transform 0.3s ease;
+}
+
+.portfolio-grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-card .wp-block-post-featured-image {
+    margin-bottom: 0 !important;
+    overflow: hidden;
+}
+
+.portfolio-card .wp-block-post-featured-image img {
+    transition: transform 0.5s ease;
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.portfolio-card:hover .wp-block-post-featured-image img {
+    transform: scale(1.05);
+}
+
+.portfolio-card .wp-block-post-title {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.portfolio-card .wp-block-post-excerpt {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card .wp-block-post-excerpt__excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.portfolio-card .wp-block-post-excerpt__more-link {
+    display: inline-block;
+    background-color: var(--wp--preset--color--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.portfolio-card .wp-block-post-excerpt__more-link:hover {
+    background-color: var(--wp--preset--color--secondary);
+}
+
+/* Portfolio Single */
+.single-portfolio .wp-block-post-featured-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.single-portfolio .wp-block-post-featured-image img {
+    width: 100%;
+    height: auto;
+}
+
+.single-portfolio .wp-block-post-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.single-portfolio .wp-block-post-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Portfolio Filter Navigation */
+.portfolio-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-filter a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background-color: #f5f5f5;
+}
+
+.portfolio-filter a:hover,
+.portfolio-filter a.active {
+    background-color: var(--wp--preset--color--primary);
+    color: white;
+}
+
+/* Portfolio Pagination */
+.wp-block-query-pagination {
+    margin-top: 3rem;
+}
+
+.wp-block-query-pagination .page-numbers {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 0 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.wp-block-query-pagination .page-numbers.current {
+    background-color: var(--wp--preset--color--primary);
+    color: white;
+}
+
+.wp-block-query-pagination .page-numbers:not(.current):hover {
+    background-color: #f0f0f0;
+}
+
+/* Related Projects */
+.related-projects {
+    margin-top: 3rem;
+}
+
+.related-projects h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.related-projects .wp-block-post-template {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .portfolio-grid .wp-block-post-template {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .related-projects .wp-block-post-template {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid .wp-block-post-template {
+        grid-template-columns: 1fr;
+    }
+    
+    .related-projects .wp-block-post-template {
+        grid-template-columns: 1fr;
+    }
+}

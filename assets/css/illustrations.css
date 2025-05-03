@@ -1,0 +1,286 @@
+/* Illustrations and Decorative Elements for MDPorto Theme */
+
+/* Developer Illustration Container */
+.developer-illustration {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Floating Image Animation */
+.floating-image {
+    animation: float 6s ease-in-out infinite;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    border: 4px solid rgba(9, 132, 227, 0.2);
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Code Elements */
+.code-element {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-family: monospace;
+    font-size: 18px;
+    color: white;
+    border-left: 5px solid var(--wp--preset--color--secondary);
+    z-index: 1;
+    animation: pulse 3s ease-in-out infinite;
+    pointer-events: none; /* Memastikan elemen ini tidak menghalangi interaksi dengan tombol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+}
+
+.code-html {
+    top: 15%;
+    left: 0%;
+    animation-delay: 0s;
+}
+
+.code-css {
+    top: 5%;
+    right: 5%;
+    animation-delay: 0.5s;
+}
+
+.code-js {
+    bottom: 10%;
+    right: 0%;
+    animation-delay: 1s;
+}
+
+.code-wp {
+    bottom: 20%;
+    left: 5%;
+    animation-delay: 1.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+/* Service Cards */
+.service-card {
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.service-icon {
+    margin-bottom: 1.5rem;
+    color: var(--wp--preset--color--primary);
+    background-color: rgba(33, 154, 104, 0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--wp--preset--color--primary), var(--wp--preset--color--secondary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Project Modal */
+.project-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.project-modal-content {
+    position: relative;
+    background-color: white;
+    margin: 5% auto;
+    padding: 0;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid var(--wp--preset--color--light-gray);
+    animation: modalFadeIn 0.5s ease-in-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--wp--preset--color--light-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.project-modal-close:hover {
+    background-color: #076bba; /* 20% lebih gelap dari secondary #0984e3 */
+    color: var(--wp--preset--color--white);
+    box-shadow: 0 5px 10px rgba(9, 132, 227, 0.2);
+}
+
+.project-modal-header {
+    padding: 20px 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.project-modal-header h2 {
+    margin: 0 0 5px;
+    font-size: 24px;
+}
+
+.project-modal-category {
+    display: inline-block;
+    background-color: var(--wp--preset--color--secondary);
+    color: var(--wp--preset--color--white);
+    padding: 3px 10px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.project-modal-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-modal-info {
+    padding: 30px;
+}
+
+.project-modal-description,
+.project-modal-technologies {
+    margin-bottom: 20px;
+}
+
+.project-modal-description h3,
+.project-modal-technologies h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.project-modal-actions {
+    margin-top: 30px;
+}
+
+.project-modal-link {
+    display: inline-block;
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.project-modal-link:hover {
+    background-color: #187d53; /* 20% lebih gelap dari primary #219a68 */
+    box-shadow: 0 5px 10px rgba(33, 154, 104, 0.2);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .code-element {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    .project-modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .code-element {
+        display: none;
+    }
+    
+    .project-modal-header {
+        padding: 15px 20px;
+    }
+    
+    .project-modal-info {
+        padding: 20px;
+    }
+}

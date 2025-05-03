@@ -1,0 +1,76 @@
+/* Font Declarations */
+
+/* Open Sans - Regular */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+         url('../fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Open Sans - Medium */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Medium.woff2') format('woff2'),
+         url('../fonts/OpenSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Open Sans - SemiBold */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+         url('../fonts/OpenSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Open Sans - Bold */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+         url('../fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Arvo - Regular */
+@font-face {
+    font-family: 'Arvo';
+    src: url('../fonts/Arvo.woff2') format('woff2'),
+         url('../fonts/Arvo.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Arvo - Bold */
+@font-face {
+    font-family: 'Arvo';
+    src: url('../fonts/Arvo-Bold.woff2') format('woff2'),
+         url('../fonts/Arvo-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Font Variables */
+:root {
+    --font-open-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-arvo: 'Arvo', Georgia, serif;
+}
+
+/* Font Classes */
+.has-open-sans-font-family {
+    font-family: var(--font-open-sans);
+}
+
+.has-arvo-font-family {
+    font-family: var(--font-arvo);
+}

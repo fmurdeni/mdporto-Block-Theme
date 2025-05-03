@@ -1,0 +1,322 @@
+/* Animation and Modern Effects for MDPorto Theme */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Reveal Animation */
+@keyframes reveal-up {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Slide In From Left */
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Slide In From Right */
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(9, 132, 227, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(9, 132, 227, 0.8); }
+    100% { box-shadow: 0 0 5px rgba(9, 132, 227, 0.5); }
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease forwards;
+}
+
+.animate-slide-left {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.animate-slide-right {
+    animation: slideInRight 0.8s ease forwards;
+}
+
+.animate-bounce {
+    animation: bounce 3s ease-in-out infinite;
+}
+
+.animate-glow {
+    animation: glow 3s ease-in-out infinite;
+}
+
+/* Typing Animation */
+.typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--wp--preset--color--primary);
+    animation: 
+        typing 3.5s steps(40, end),
+        blink 0.75s step-end infinite;
+}
+
+/* Banner Animations */
+.banner-section {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+
+.banner-section:hover {
+    background-position: right center;
+    filter: brightness(1.05);
+}
+
+/* Scroll Reveal Animation - Elements will animate when they come into view */
+.reveal {
+    opacity: 0;
+    transition: all 1.2s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+.reveal-left.active {
+    transform: translateX(0);
+}
+
+.reveal-left {
+    transform: translateX(-50px);
+}
+
+.reveal-right.active {
+    transform: translateX(0);
+}
+
+.reveal-right {
+    transform: translateX(50px);
+}
+
+.reveal-up.active {
+    transform: translateY(0);
+}
+
+.reveal-up {
+    transform: translateY(50px);
+}
+
+/* Modern Card Effects */
+.hover-card {
+    transition: all 0.5s ease-in-out;
+}
+
+/* Gradient Backgrounds */
+.gradient-primary {
+    background: linear-gradient(135deg, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--secondary) 100%);
+    background-size: 200% auto;
+    transition: background-position 0.8s ease-in-out;
+}
+
+.gradient-primary:hover {
+    background-position: right center;
+}
+
+.gradient-dark {
+    background: linear-gradient(135deg, var(--wp--preset--color--dark) 0%, var(--wp--preset--color--secondary) 100%);
+    background-size: 200% auto;
+    transition: background-position 0.8s ease-in-out;
+}
+
+.gradient-dark:hover {
+    background-position: right center;
+}
+
+/* Glassmorphism Effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Neon Text Effect */
+.neon-text {
+    text-shadow: 0 0 5px rgba(33, 154, 104, 0.7), 
+                 0 0 10px rgba(33, 154, 104, 0.5), 
+                 0 0 15px rgba(33, 154, 104, 0.3);
+    transition: all 0.5s ease-in-out;
+}
+
+.neon-text:hover {
+    text-shadow: 0 0 5px rgba(9, 132, 227, 0.7), 
+                 0 0 10px rgba(9, 132, 227, 0.5), 
+                 0 0 15px rgba(9, 132, 227, 0.3);
+}
+
+/* Button Animations */
+.btn-primary {
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary:hover {
+    background-color: #187d53; /* 20% lebih gelap dari primary #219a68 */
+    box-shadow: 0 5px 10px rgba(33, 154, 104, 0.2);
+}
+
+.btn-secondary {
+    background-color: var(--wp--preset--color--secondary);
+    color: var(--wp--preset--color--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-secondary:hover {
+    background-color: #076bba; /* 20% lebih gelap dari secondary #0984e3 */
+    box-shadow: 0 5px 10px rgba(9, 132, 227, 0.2);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--wp--preset--color--primary);
+    border: 1px solid var(--wp--preset--color--primary);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-outline:hover {
+    background-color: #187d53; /* 20% lebih gelap dari primary #219a68 */
+    color: var(--wp--preset--color--white);
+    border-color: transparent;
+    box-shadow: 0 5px 10px rgba(33, 154, 104, 0.2);
+}
+
+/* Code Block Styling */
+.code-block {
+    font-family: 'Courier New', monospace;
+    background-color: #282c34;
+    color: #abb2bf;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    position: relative;
+}
+
+.code-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #21252b;
+    border-radius: 8px 8px 0 0;
+}
+
+.code-block::after {
+    content: '• • •';
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    color: #606060;
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+
+/* Terminal Styling */
+.terminal {
+    background-color: #282c34;
+    color: #abb2bf;
+    padding: 2rem 1.5rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    position: relative;
+}
+
+.terminal::before {
+    content: '$ ';
+    color: #98c379;
+}
+
+/* Floating Elements */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive animations - disable on mobile for performance */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .animate-on-desktop {
+        animation: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}

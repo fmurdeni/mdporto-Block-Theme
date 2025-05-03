@@ -1,0 +1,227 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "slug": "primary",
+                    "color": "#219a68",
+                    "name": "Hijau Daun"
+                },
+                {
+                    "slug": "secondary",
+                    "color": "#0984e3",
+                    "name": "Biru Laut"
+                },
+                {
+                    "slug": "cta",
+                    "color": "#ff793f",
+                    "name": "Orange CTA"
+                },
+                {
+                    "slug": "dark",
+                    "color": "#2f3640",
+                    "name": "Abu Gelap"
+                },
+                {
+                    "slug": "light",
+                    "color": "#fdfefe",
+                    "name": "Putih Salju"
+                },
+                {
+                    "slug": "white",
+                    "color": "#ffffff",
+                    "name": "White"
+                },
+                {
+                    "slug": "light-gray",
+                    "color": "#dcdde1",
+                    "name": "Abu Soft"
+                },
+                {
+                    "slug": "red-orange",
+                    "color": "#e75c5c",
+                    "name": "Red"
+                }
+            ],
+            "gradients": [
+                {
+                    "slug": "green-to-blue",
+                    "gradient": "linear-gradient(135deg, #219a68 0%, #0984e3 100%)",
+                    "name": "Hijau ke Biru"
+                },
+                {
+                    "slug": "dark-to-light",
+                    "gradient": "linear-gradient(135deg, #2f3640 0%, #fdfefe 100%)",
+                    "name": "Gelap ke Terang"
+                },
+                {
+                    "slug": "blue-shades",
+                    "gradient": "linear-gradient(135deg, #0984e3 0%, #74b9ff 100%)",
+                    "name": "Gradasi Biru"
+                },
+                {
+                    "slug": "green-shades",
+                    "gradient": "linear-gradient(135deg, #219a68 0%, #7bed9f 100%)",
+                    "name": "Gradasi Hijau"
+                }
+            ],
+            "custom": true,
+            "customGradient": true,
+            "defaultPalette": false,
+            "defaultGradients": false
+        },
+        "typography": {
+            "fontSizes": [
+                {
+                    "slug": "small",
+                    "size": "14px",
+                    "name": "Small"
+                },
+                {
+                    "slug": "normal",
+                    "size": "16px",
+                    "name": "Normal"
+                },
+                {
+                    "slug": "medium",
+                    "size": "20px",
+                    "name": "Medium"
+                },
+                {
+                    "slug": "large",
+                    "size": "24px",
+                    "name": "Large"
+                },
+                {
+                    "slug": "x-large",
+                    "size": "32px",
+                    "name": "Extra Large"
+                },
+                {
+                    "slug": "xx-large",
+                    "size": "48px",
+                    "name": "XX Large"
+                }
+            ],
+            "fontFamilies": [
+                {
+                    "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+                    "slug": "system-font",
+                    "name": "System Font"
+                },
+                {
+                    "fontFamily": "var(--font-open-sans)",
+                    "slug": "open-sans",
+                    "name": "Open Sans"
+                },
+                {
+                    "fontFamily": "var(--font-arvo)",
+                    "slug": "arvo",
+                    "name": "Arvo"
+                }
+            ],
+            "customFontSize": true
+        },
+        "spacing": {
+            "units": ["px", "em", "rem", "vh", "vw", "%"],
+            "padding": true,
+            "margin": true
+        },
+        "layout": {
+            "contentSize": "1200px",
+            "wideSize": "100%"
+        },
+        "custom": {
+            "container": {
+                "narrow": "840px",
+                "normal": "1200px",
+                "wide": "100%"
+            }
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "var(--wp--preset--color--white)",
+            "text": "var(--wp--preset--color--dark)"
+        },
+        "typography": {
+            "fontSize": "var(--wp--preset--font-size--normal)",
+            "fontFamily": "var(--wp--preset--font-family--open-sans)",
+            "lineHeight": "1.6"
+        },
+        "elements": {
+            "link": {
+                "color": {
+                    "text": "var(--wp--preset--color--primary)"
+                }
+            },
+            "h1": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--arvo)",
+                    "fontSize": "var(--wp--preset--font-size--xx-large)",
+                    "lineHeight": "1.2"
+                }
+            },
+            "h2": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--arvo)",
+                    "fontSize": "var(--wp--preset--font-size--x-large)",
+                    "lineHeight": "1.3"
+                }
+            },
+            "h3": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--arvo)",
+                    "fontSize": "var(--wp--preset--font-size--large)",
+                    "lineHeight": "1.4"
+                }
+            }
+        },
+        "blocks": {
+            "core/button": {
+                "color": {
+                    "background": "var(--wp--preset--color--primary)",
+                    "text": "var(--wp--preset--color--white)"
+                },
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--normal)"
+                },
+                "border": {
+                    "radius": "4px"
+                }
+            },
+            "core/navigation": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--normal)",
+                    "fontWeight": "500"
+                }
+            }
+        }
+    },
+    "templateParts": [
+        {
+            "name": "header",
+            "title": "Header",
+            "area": "header"
+        },
+        {
+            "name": "footer",
+            "title": "Footer",
+            "area": "footer"
+        }
+    ],
+    "customTemplates": [
+        {
+            "name": "page-no-title",
+            "title": "Page (No Title)",
+            "postTypes": ["page"]
+        },
+        {
+            "name": "portfolio-single",
+            "title": "Portfolio Single",
+            "postTypes": ["post"]
+        }
+    ]
+}

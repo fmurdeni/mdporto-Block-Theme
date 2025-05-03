@@ -1,0 +1,850 @@
+/* Modern Components for MDPorto Theme */
+.wp-site-blocks {
+    overflow: hidden;
+}
+/* Modern About Section Styles */
+.modern-about-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-background-shapes .shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.about-background-shapes .shape-1 {
+    width: 300px;
+    height: 300px;
+    background-color: var(--wp--preset--color--primary);
+    top: -100px;
+    left: -100px;
+}
+
+.about-background-shapes .shape-2 {
+    width: 200px;
+    height: 200px;
+    background-color: var(--wp--preset--color--secondary);
+    bottom: -50px;
+    right: 10%;
+}
+
+.about-background-shapes .shape-3 {
+    width: 150px;
+    height: 150px;
+    background-color: var(--wp--preset--color--primary);
+    top: 20%;
+    right: -50px;
+}
+
+.about-background-shapes .shape-4 {
+    width: 100px;
+    height: 100px;
+    background-color: var(--wp--preset--color--secondary);
+    bottom: 30%;
+    left: 5%;
+}
+
+.section-subtitle {
+    color: var(--wp--preset--color--primary);
+    font-weight: 500;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about-image-frame {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 5px solid #fff;
+    transition: all 0.5s ease;
+}
+
+.about-image-frame:hover {    
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.15);
+}
+
+.about-profile-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: all 0.5s ease;
+}
+
+.about-image-frame:hover .about-profile-image {
+    transform: scale(1.05);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    background: #FF5722;
+    color: white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 5px solid white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(33, 154, 104, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(33, 154, 104, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(33, 154, 104, 0);
+    }
+}
+
+.experience-years {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.experience-text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.about-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.about-info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.info-value {
+    font-weight: 500;
+}
+
+.info-value.available {
+    color: var(--wp--preset--color--primary);
+    position: relative;
+    display: inline-block;
+}
+
+.info-value.available::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--wp--preset--color--primary);
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.button-icon {
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.download-cv-button a {
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.connect-button a {
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+
+/* Responsive styles for About section */
+@media (max-width: 768px) {
+    .about-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .experience-badge {
+        width: 100px;
+        height: 100px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .experience-years {
+        font-size: 1.75rem;
+    }
+    
+    .experience-text {
+        font-size: 0.7rem;
+    }
+}
+
+/* Hero Section with Developer-themed Elements */
+.hero-developer {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    animation: gradientAnimation 15s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-developer:hover {
+    animation-play-state: paused;
+}
+
+
+.hero-developer {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Memastikan konten hero selalu di atas animasi background */
+.hero-developer .wp-block-columns {
+    position: relative;
+    z-index: 5; /* Nilai lebih tinggi untuk memastikan konten di atas animasi */
+}
+
+.network-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Menggunakan viewport width */
+    height: 100%;
+    z-index: 0; /* Tetap di z-index terendah */
+    pointer-events: none;
+    overflow: visible; /* Memastikan konten tidak terpotong */
+    margin-left: calc(-50vw + 50%); /* Mengatur posisi agar tetap di tengah */
+    max-width: 100%;
+}
+
+
+
+.hero-developer .code-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Menggunakan viewport width */
+    height: 100%;
+    overflow: visible; /* Memastikan konten tidak terpotong */
+    z-index: 1; /* Di atas network-bg tapi di bawah konten */
+    opacity: 0.3;
+    pointer-events: none; /* Memastikan elemen ini tidak menghalangi interaksi dengan tombol */
+    left: 50%;
+    transform: translateX(-50%); /* Memposisikan di tengah */
+}
+
+.hero-developer .code-particle {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: monospace;
+    font-size: 14px;
+    user-select: none;
+}
+
+/* Skills section now uses murdeni-skills-percentage block */
+
+/* Portfolio section now uses murdeni-portfolio-grid block */
+.social-icon:hover {
+    background-color: #187d53; /* 20% lebih gelap dari primary #219a68 */
+    color: var(--wp--preset--color--white);
+    box-shadow: 0 5px 10px rgba(33, 154, 104, 0.2);
+}
+
+/* Modern Testimonial Slider */
+/* Testimonial Slider Styles */
+.testimonial-slider-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.testimonial-slider {
+    position: relative;
+    padding: 3rem 0;
+}
+
+.testimonial-note {
+    font-style: italic;
+    color: #666;
+    margin-top: 2rem;
+}
+
+.pagination-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--wp--preset--color--white);
+    border: 1px solid var(--wp--preset--color--light-gray);
+    color: var(--wp--preset--color--dark);
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pagination-button:hover {
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(33, 154, 104, 0.2);
+}
+
+/* Timeline Component */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--wp--preset--color--light);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 0 2rem 2rem;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-content {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid var(--wp--preset--color--light-gray);
+    position: relative;
+}
+
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::after {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+    left: -10px;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--wp--preset--color--primary);
+    border-radius: 50%;
+    top: 20px;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -10px;
+}
+
+.timeline-date {
+    color: var(--wp--preset--color--secondary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Modern Contact Form */
+.modern-contact-form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid var(--wp--preset--color--light-gray);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--wp--preset--color--primary);
+    outline: none;
+}
+
+.form-button {
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.form-button:hover {
+    background-color: #187d53; /* 20% lebih gelap dari primary #219a68 */
+    box-shadow: 0 5px 10px rgba(33, 154, 104, 0.2);
+}
+
+/* Modern Services Section Styles */
+.modern-services-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--wp--preset--color--primary), var(--wp--preset--color--cta));
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover:before {
+    opacity: 1;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 87, 34, 0.1);
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background-color: var(--wp--preset--color--cta);
+}
+
+.service-icon svg {
+    fill: var(--wp--preset--color--cta);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon svg {
+    fill: white;
+}
+
+.service-features {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* CTA Card in Services Section */
+.cta-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(135deg, var(--wp--preset--color--primary) 0%, #0984e3 100%) !important;
+    border: none !important;
+    transition: all 0.3s ease;
+}
+
+.cta-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 30px rgba(9, 132, 227, 0.2) !important;
+}
+
+.cta-card:before {
+    display: none;
+}
+
+.cta-card .wp-block-button__link {
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.cta-card .wp-block-button__link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Modern Contact Section Styles */
+.modern-contact-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23219a68' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 0;
+}
+
+/* Contact Info Card */
+.contact-info-card {
+    height: 100%;
+    background: linear-gradient(135deg, var(--wp--preset--color--primary) 0%, #187d53 100%) !important;
+    box-shadow: 0 15px 30px rgba(33, 154, 104, 0.2);
+    transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+    box-shadow: 0 20px 40px rgba(33, 154, 104, 0.3);
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-info-item:hover .contact-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.contact-text h4 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-text p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-social-links {
+    margin-top: 1rem;
+}
+
+.contact-social-links .wp-block-social-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.contact-social-links .wp-block-social-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Contact Form Card */
+.contact-form-card {
+    height: 100%;    
+    transition: all 0.3s ease;
+    border: none;
+}
+
+
+/* Contact Form 7 Styling */
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label,
+.contact-form-card .wpcf7-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.contact-form .form-input,
+.contact-form-card .wpcf7-form .wpcf7-form-control {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-input:focus,
+.contact-form-card .wpcf7-form .wpcf7-form-control:focus {
+    border-color: var(--wp--preset--color--primary);
+    box-shadow: 0 0 0 3px rgba(33, 154, 104, 0.1);
+    outline: none;
+    background-color: #fff;
+}
+
+.contact-form .form-submit,
+.contact-form-card .wpcf7-submit {
+    margin-top: 2rem;
+    position: relative;
+}
+
+.contact-form .submit-button,
+.contact-form-card .wpcf7-form .wpcf7-submit {
+    background-color: var(--wp--preset--color--primary);
+    color: white;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+}
+
+.contact-form .submit-button:hover,
+.contact-form-card .wpcf7-form .wpcf7-submit:hover {
+    background-color: #187d53;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(33, 154, 104, 0.2);
+}
+
+.wpcf7-form .wpcf7-spinner {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.contact-form .wpcf7-response-output,
+.contact-form-card .wpcf7-response-output {
+    margin: 2rem 0 0 0;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border-width: 1px;
+}
+
+/* Form validation styling */
+.contact-form .wpcf7-not-valid-tip,
+.contact-form-card .wpcf7-not-valid-tip {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.contact-form .wpcf7-not-valid,
+.contact-form-card .wpcf7-not-valid {
+    border-color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.05);
+}
+
+.contact-form .wpcf7-validation-errors,
+.contact-form-card .wpcf7-validation-errors {
+    border-color: #ffc107;
+    background-color: rgba(255, 193, 7, 0.1);
+    color: #856404;
+}
+
+.contact-form .wpcf7-mail-sent-ok,
+.contact-form-card .wpcf7-mail-sent-ok {
+    border-color: var(--wp--preset--color--primary);
+    background-color: rgba(33, 154, 104, 0.1);
+    color: var(--wp--preset--color--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-columns {
+        gap: 2rem !important;
+    }
+    
+    .contact-info-column,
+    .contact-form-column {
+        flex-basis: 100% !important;
+    }
+}
+
+/* WordPress Block Button Styles */
+.wp-block-button__link {
+    transition: all 0.5s ease-in-out;
+}
+
+.wp-block-button__link:hover {
+    box-shadow: 0 5px 10px rgba(33, 154, 104, 0.2);
+}
+
+.wp-block-button__link.has-primary-background-color:hover {
+    background-color: #187d53 !important; /* 20% lebih gelap dari primary #219a68 */
+    box-shadow: 0 5px 10px rgba(33, 154, 104, 0.2);
+}
+
+.wp-block-button__link.has-secondary-background-color:hover {
+    background-color: #076bba !important; /* 20% lebih gelap dari secondary #0984e3 */
+    box-shadow: 0 5px 10px rgba(9, 132, 227, 0.2);
+}
+
+.wp-block-button__link.has-dark-background-color:hover {
+    background-color: #3f4a58 !important; /* 20% lebih terang dari dark #2f3640 */
+    box-shadow: 0 5px 10px rgba(47, 54, 64, 0.2);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background-color: var(--wp--preset--color--cta) !important;
+    color: var(--wp--preset--color--white) !important;
+    border-color: transparent;
+    box-shadow: 0 5px 10px rgba(255, 121, 63, 0.2);
+}
+
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 40px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 0;
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(odd) {
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-dot {
+        left: 30px !important;
+        right: auto !important;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content::after,
+    .timeline-item:nth-child(even) .timeline-content::after {
+        left: -10px;
+        right: auto;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
