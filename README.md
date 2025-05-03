@@ -2,7 +2,7 @@
 
 A modern, elegant WordPress block theme designed for portfolio websites, with a focus on showcasing creative work and professional skills.
 
-![MDPorto Theme Screenshot](screenshot.png)
+[![MDPorto Theme Screenshot](screenshot.png)](https://github.com/fmurdeni/mdporto-Block-Theme/blob/main/screenshots/screenshot.png)
 
 ## Description
 
